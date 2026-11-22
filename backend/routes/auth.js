@@ -3,6 +3,10 @@ const bcrypt=require('bcryptjs'),jwt=require('jsonwebtoken'),pool=require('../co
 const {authenticate,allowRoles}=require('../middleware/auth');
 const wrap=require('../utils/asyncHandler');
 
+router.get('/debug', (req, res) => {
+  res.json({ message: 'Auth routes are working' });
+});
+
 router.post('/login',wrap(async(req,res)=>{
  const {email,password}=req.body||{};
  if(!email||!password)return res.status(400).json({message:'Email and password required.'});
