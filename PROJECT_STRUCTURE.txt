@@ -1,0 +1,2 @@
+database/: SQL schema, functions, triggers, sample data, roles, indexes
+backend/: Express API, PostgreSQL connection, JWT auth, RBAC routes
