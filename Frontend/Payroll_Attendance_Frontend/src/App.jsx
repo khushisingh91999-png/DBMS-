@@ -8,7 +8,7 @@ import {
   ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid
 } from 'recharts';
 
-const API = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+const API = import.meta.env.VITE_API_URL || '/api';
 const money = (v) => new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }).format(Number(v || 0));
 const nice = (s='') => String(s).replaceAll('_',' ').replace(/\b\w/g, c => c.toUpperCase());
 const dateText = (v) => v ? String(v).slice(0,10) : '—';

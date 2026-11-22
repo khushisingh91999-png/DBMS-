@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "buildCommand": "npm install --prefix Frontend/Payroll_Attendance_Frontend && npm run build --prefix Frontend/Payroll_Attendance_Frontend",
+  "outputDirectory": "Frontend/Payroll_Attendance_Frontend/dist",
+  "functions": {
+    "api/[...path].js": {
+      "includeFiles": "backend/**"
+    }
+  }
+}
