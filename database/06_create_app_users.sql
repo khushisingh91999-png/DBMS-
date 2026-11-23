@@ -15,3 +15,12 @@ FROM information_schema.tables
 WHERE table_name = 'app_users';
 
 SELECT * FROM app_users;
+
+ALTER TABLE public.app_users
+RENAME COLUMN name TO full_name;
+
+
+SELECT column_name
+FROM information_schema.columns
+WHERE table_name = 'app_users'
+ORDER BY ordinal_position;
