@@ -3,8 +3,11 @@
   "buildCommand": "npm install --prefix Frontend/Payroll_Attendance_Frontend && npm run build --prefix Frontend/Payroll_Attendance_Frontend",
   "outputDirectory": "Frontend/Payroll_Attendance_Frontend/dist",
   "functions": {
-    "api/[...path].js": {
+    "api/index.js": {
       "includeFiles": "backend/**"
     }
-  }
+  },
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api" }
+  ]
 }
