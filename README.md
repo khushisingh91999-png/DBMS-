@@ -13,16 +13,18 @@ PostgreSQL 14+, Node.js 18+, npm.
    - `database/03_sample_data.sql`
    - `database/04_roles.sql`
    - `database/05_indexes.sql`
+   - `database/06_create_app_users.sql`
 
 ## Backend setup
-Copy `backend/.env.example` to `backend/.env`, enter your PostgreSQL password, then:
+`backend/.env`, enter your PostgreSQL password, then:
 ```bash
 cd backend
 npm install
 npm run create-admin
 npm run dev
 ```
-The API runs at `http://localhost:5000`; health check: `/api/health`.
+The API runs at `http://localhost:3000`; health check: `/api/health`.
+Live Project Link :-https://dbms-liart-eight.vercel.app
 
 Never upload `.env` or passwords to GitHub. This package is source code; it cannot create or connect to your local PostgreSQL database until you configure `.env` and execute the SQL scripts.
 
